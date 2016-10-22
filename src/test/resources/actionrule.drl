@@ -1,0 +1,10 @@
+import com.itametis.sandbox.drools.Message;
+import com.itametis.sandbox.drools.Action;
+
+rule "Act on high value in message"
+when
+  message:Message (messageValue > 17)
+then
+    Action action = new Action();
+    action.performAction(message);
+end

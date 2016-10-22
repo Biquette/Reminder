@@ -1,0 +1,10 @@
+import com.itametis.sandbox.drools.Message;
+import com.itametis.sandbox.drools.Action;
+
+rule "Hello World"
+when
+    message:Message (type == 'Hello');
+then
+    message.printMessage();
+end
+
